@@ -1,0 +1,11 @@
+name: Security Snyk Infrastructure Analysis
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    uses: dnb-main/devx-github-org-workflows/.github/workflows/security-pr-snyk_infrastructure_analysis.yml@main
+    secrets: inherit

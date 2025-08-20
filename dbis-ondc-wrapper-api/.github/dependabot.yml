@@ -1,0 +1,25 @@
+version: 2
+
+registries:
+  terraform-private-dnb-core:
+    type: terraform-registry
+    url: https://app.terraform.io/app/dnb-core/registry/
+    token: ${{ secrets.TERRAFORM_REGISTRY_DNB_CORE_TOKEN }}
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "terraform"
+    directory: "/terraform"
+    registries:
+      - terraform-private-dnb-core
+    schedule:
+      interval: "weekly"
+  # update this based on your team's configuration
+  # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+  # - package-ecosystem: "source"
+  #   directory: "/src"
+  #   schedule:
+  #     interval: "weekly"

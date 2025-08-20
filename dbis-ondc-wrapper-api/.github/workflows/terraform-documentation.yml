@@ -1,0 +1,7 @@
+name: Generate terraform docs
+on:
+  - pull_request
+  
+jobs:
+  release:
+    uses: dnb-main/devx-github-org-workflows/.github/workflows/terraform-documentation.yml@main

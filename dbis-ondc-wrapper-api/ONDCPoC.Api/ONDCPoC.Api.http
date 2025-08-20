@@ -1,0 +1,16 @@
+@ONDCPoC.Api_HostAddress = http://localhost:8080
+
+
+GET {{ONDCPoC.Api_HostAddress}}/PANdetails/
+Accept: application/json
+
+GET {{ONDCPoC.Api_HostAddress}}/GSTdetails/
+Accept: application/json
+
+GET {{ONDCPoC.Api_HostAddress}}/MSMEdetails/
+Accept: application/json
+
+GET {{ONDCPoC.Api_HostAddress}}/FSSAIdetails/
+Accept: application/json
+
+###

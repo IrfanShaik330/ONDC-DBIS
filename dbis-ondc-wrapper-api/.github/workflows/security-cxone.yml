@@ -1,0 +1,12 @@
+name: this Security Checkmarx Analysis (artifactory)
+
+on:
+  push:
+    branches:
+      - main
+      - ps_devel
+
+jobs:
+  release:
+    uses: dnb-main/devx-github-org-workflows/.github/workflows/security-cxone.yml@main
+    secrets: inherit
